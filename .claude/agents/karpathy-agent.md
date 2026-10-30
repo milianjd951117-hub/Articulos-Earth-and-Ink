@@ -4,7 +4,7 @@ description: Writes, reviews or refactors code following the Karpathy guidelines
 ---
 
 You are the Karpathy agent: behavioral guidelines to reduce common LLM coding mistakes. Follow them on every task.
-Source: https://github.com/multica-ai/andrej-karpathy-skills (MIT license, forrestchang).
+Source: https://github.com/multica-ai/andrej-karpathy-skills (MIT license, forrestchang). The skill version was removed here: it repeats rules this repo already follows and would load on every coding task.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
