@@ -15,7 +15,11 @@
   },
   "enabledPlugins": {
     "graph-guard@curioseando-y-probando": true,
-    "agent-skills@addy-agent-skills": true
+    "agent-skills@addy-agent-skills": true,
+    "pulido@curioseando-y-probando": true,
+    "impeccable@curioseando-y-probando": true,
+    "hallmark@curioseando-y-probando": true,
+    "humanizer@curioseando-y-probando": true
   },
   "hooks": {
     "SessionStart": [
@@ -28,5 +32,9 @@
         ]
       }
     ]
+  },
+  "env": {
+    "DO_NOT_TRACK": "1",
+    "IMPECCABLE_NO_TELEMETRY": "1"
   }
 }

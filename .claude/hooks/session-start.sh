@@ -11,6 +11,10 @@ fi
 PLUGINS=(
   "curioseando-y-probando milianjd951117-hub/curioseando-y-probando graph-guard"
   "addy-agent-skills addyosmani/agent-skills agent-skills"
+  "curioseando-y-probando milianjd951117-hub/curioseando-y-probando pulido"
+  "curioseando-y-probando milianjd951117-hub/curioseando-y-probando impeccable"
+  "curioseando-y-probando milianjd951117-hub/curioseando-y-probando hallmark"
+  "curioseando-y-probando milianjd951117-hub/curioseando-y-probando humanizer"
 )
 
 # A failing plugin only warns, so the others still install and the session starts.
@@ -27,3 +31,10 @@ for entry in "${PLUGINS[@]}"; do
     claude plugin install "$plugin@$marketplace" --scope user || echo "warn: could not install $plugin@$marketplace" >&2
   fi
 done
+
+# hallmark's in-browser check (sloplint --render) drives the container's Chrome through
+# puppeteer-core (Google's Puppeteer team, Apache-2.0; it downloads no browser).
+# Pinned and without install scripts, so it does not change unreviewed.
+if ! npm ls -g puppeteer-core >/dev/null 2>&1; then
+  npm install -g --ignore-scripts puppeteer-core@25.14.0 >/dev/null 2>&1 || echo "warn: could not install puppeteer-core" >&2
+fi
