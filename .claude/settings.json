@@ -5,10 +5,17 @@
         "source": "github",
         "repo": "milianjd951117-hub/curioseando-y-probando"
       }
+    },
+    "addy-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "addyosmani/agent-skills"
+      }
     }
   },
   "enabledPlugins": {
-    "graph-guard@curioseando-y-probando": true
+    "graph-guard@curioseando-y-probando": true,
+    "agent-skills@addy-agent-skills": true
   },
   "hooks": {
     "SessionStart": [
